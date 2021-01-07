@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Methodenkatalog-Beziehungskultur</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script>
+    function check1(form){
+      document.getElementById("feedback1").innerHTML = form.usrname.value + ": <br>" + form.comment.value;
+      alert("Danke für dein Feedback!");
+    }
+     function check2(form){
+       document.getElementById("feedback2").innerHTML = form.usrname.value + ": <br>" + form.comment.value;
+       alert("Danke für dein Feedback!");
+     }
+    function check3(form){
+      document.getElementById("feedback3").innerHTML = form.usrname.value + ": <br>" + form.comment.value;
+      alert("Danke für dein Feedback!");
+    }
+
+    function sendbutton(){
+      alert("Danke für deinen Beitrag! Wir werden ihn so schnell wie möglich bearbeiten.");
+    }
+  </script>
+</head>
+<body style="background: aliceblue">
+
+<div class="wrapper">
+  <div class="header"><div class="titleheader">METHODENKATALOG</div></div>
+  <h1>Inhaltsverzeichnis</h1>
+<ul>
+  <li><a href="#komm" style="text-decoration: none; color: black"><h2>Kommunikation</h2></a></li>
+  <li><a href="#bez" style="text-decoration: none; color: black"><h2>Beziehungskultur</h2></a></li>
+</ul>
+  <hr>
+<h2 id="komm">1. Kommunikation</h2>
+<h3>Aktives Zuhören</h3>
+  <em>Übung mit Aussagen paraphrasieren, verbalisieren </em><br>
+  <br>
+  <details class="feedback">
+    <summary><span>
+      Mehr erfahren...
+    </span></summary>
+    <br>
+    <strong>3 Rollen:</strong> Erzähler, Beobachter, Redner/in<br>
+<br>
+Setzt euch gegenüber, sodass ihr alle Blickkontakt halten könnt. Stellt Rapport und Pacing her. Dann beginnt der/die Erzähler/in von einem kleinen “Problem” zu erzählen, z.B. dem Wetter, der Katze/Hund usw.<br>
+Der/die Zuhörer/in hört aktiv zu und benützt sowohl nonverbale als auch verbale Methoden und Techniken. Der/die Beobachter/in macht sich Notizen zu den benutzten Techniken und gibt im Anschluss Feedback. Tauscht danach die Rollen, sodass jeder einmal in jeder Rolle war. <br><br>
+<strong>Zeitrahmen:</strong> 3 bis 5 min pro Person<br><br>
+
+<strong>nonverbale Techniken und Methoden zum Aktiven Zuhören:</strong><br>
+Kopfnicken, Kopfneigung, Bewegung der Augenbrauen, Körperhaltung<br><br>
+
+<strong>verbale Techniken und Methoden zum Aktiven Zuhören:</strong><br>
+Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
+<br>
+<br>
+<strong>Pacing:</strong> Pacing bezeichnet man den Zustand, wenn sich ein Gesprächspartner in den anderen hineinversetzt. Die Anpassung an dessen Wirklichkeit und dessen Rhythmus führt zu einer gemeinsamen Verbindung. Der eine passt seinen Atemrhythmus an den des anderen an, was zu einer positiven Auswirkung auf dessen Unterbewusstsein führt. Auch die Körpersprache passt sich an: wechselt der eine z.B. die Art wie er sitzt und macht der andere dies kurz später nach, wird von Pacing gesprochen, da die Körpersprache synchronisiert ist. <br>
+<strong>Rapport:</strong> Gelingt Pacing, dann ist von Rapport die Rede. Es handelt sich dabei um einen “optimalen, vertrauensvollen Kontakt und eine gefühlte Übereinstimmung”.
+    <br><br>
+    <strong>bisherige Kommentare:</strong><br>
+    <div id="feedback2"></div>
+  </details>
+  <br>
+  <details class="feedback">
+    <summary><span>
+      Feedback
+    </span></summary>
+    <div class="form-style-6">
+      <h1>Gib uns gern dein ehrliches Feedback zu dieser Methode!</h1>
+      <form>
+        Name: <input type="text" size="25" name="usrname">
+        <textarea rows="4" cols="50" name="comment" placeholder="Dein Feedback..."></textarea>
+        <input type="button" value="Absenden"  onclick="check2(this.form)"  id="Knopf">
+      </form>
+      <br>
+    </div>
+  </details>
+
+  <h3>Ich,du,wir,man</h3>
+  <em>Eine Übung um sich bewusst zu werden, welche Auswirkung die Formulierung von Sätzen auf deren Bedeutung hat.</em><br><br>
+  <details class="feedback">
+    <summary><span>
+      Mehr erfahren...
+    </span></summary>
+    <br>
+    Bildet 4er Gruppen. Beginne für ___ Minuten all deine Sätze mit entweder:
+<ul>
+  <li>Ich</li>
+  <li>Du</li>
+  <li>Wir</li>
+  <li>Man</li>
+</ul>
+    Ihr versucht dabei ein Konfliktthema zu lösen, z.B.: ?<br>
+
+    Verteilt die 4 Rollen und diskutiert. Im Anschluss gibt es eine ___-minütige Reflexion.<br><br>
+
+    <strong>bisherige Kommentare:</strong><br>
+    <div id="feedback3"></div>
+  </details>
+  <br>
+  <details class="feedback">
+    <summary><span>
+      Feedback
+    </span></summary>
+    <div class="form-style-6">
+      <h1>Gib uns gern dein ehrliches Feedback zu dieser Methode!</h1>
+      <form id="form1">
+        Name: <input type="text" size="25" name="usrname">
+        <textarea rows="4" cols="50" name="comment" placeholder="Dein Feedback..." form="form1"></textarea>
+        <input type="button" value="Absenden"  onclick="check3(this.form)"  id="Knopf">
+      </form>
+      <br>
+    </div>
+  </details>
+
+<h2 id="bez">2. Beziehungskultur</h2>
+  <h3>Spontanlyrik und erstes Klassengespräch</h3>
+  <em>Diese Methode ermöglicht es die Stimmung in der Klasse zu bestimmen und nach Lösungen zu suchen.</em><br><br>
+  <details class="feedback">
+    <summary><span>
+      Mehr erfahren...
+    </span></summary>
+    <br>Jede und jeder Lernende erhält drei Papierstreifen und einen Flipchart-Schreiber.
+    Die Übung wird in Stille, also ohne Kommunikation und ohne Interaktionen ausgeführt.
+    Sobald der Auftrag erteilt ist, wird gleich (ohne lange zu studieren) geschrieben. Der Auftrag wird schrittweise erteilt, der nächste Schritt folgt erst, wenn der laufende Schritt abgeschlossen ist.
+    Die Lehrperson kommuniziert:
+    <ul>
+      <li>Während der Übung wird nicht geredet.</li>
+      <li>Schreiben Sie pro Papierstreifen je einen Begriff: das, was Ihnen als Erstes in den Sinn kommt, wenn Sie an diese Klasse denken. </li>
+      <li>Nehmen Sie Ihre drei Papierstreifen und kommen Sie hierher (am Boden muss genügend Platz sein). Sie stellen sich im Kreis auf; es wird weiterhin nicht geredet. </li>
+      <li>Legen Sie die Papierstreifen nahe vor sich hin, sodass der Innenraum des Kreises groß bleibt.</li>
+      <li>Nun können Sie, ohne zu reden, alle Zettel still für sich lesen.</li>
+      <li>Legen Sie nun mit den vorhandenen Zetteln ein Gedicht.</li>
+    </ul>
+    An diesem Punkt warten wir, bis die Klasse ihr Gedicht über die eigene Klasse gelegt hat. Für diesen Prozess braucht es eine gewisse Zeit. Es ist gut, wenn die Lernenden immer wieder neue Lösungen legen, also suchen. In dieser Phase kann die Lehrperson gut beobachten, wie sich die einzelnen Lernenden im Klassenverband verhalten und wie miteinander umgegangen wird.
+    <br>
+    Jetzt wird die Klasse befragt, wie das Gedicht als Ganzes wirkt. Fragen Sie nicht nach einzelnen Zetteln! Entwertungen oder Zuweisungen werden nicht zugelassen. Es handelt sich um ein Stimmungsbild der ganzen Klasse. Das ist viel aussagekräftiger, als wenn in einem Klassengespräch sich zwei bis drei Lernende als Meinungsmacher äußern. Alle Lernenden haben in dieser Übung gleich viel Gewicht und Bedeutung für die Gesamtstimmung.
+<br>
+    <strong>Wichtig:</strong> Das Gedicht soll nicht zerredet werden. Fotografieren Sie es, und hängen Sie das Bild an die Wand. Wenn die Stimmung, die im Gedicht zum Ausdruck kommt, gedrückt sein sollte, erklären Sie, dass daran in Zukunft gearbeitet wird. Fragen Sie allenfalls, was zur Verbesserung der Stimmung beitragen könnte. Fordern Sie Vorschläge eher schriftlich ein, tragen Sie die Antworten zusammen und stellen Sie sie als Ganzes (anonymisiert) wieder der Klasse zur Verfügung. Dann wird gemeinsam nach Lösungen gesucht.
+  <br>
+    <br>
+    <strong>bisherige Kommentare:</strong><br>
+    <div id="feedback1"></div>
+  </details>
+  <br>
+  <details class="feedback">
+    <summary><span>
+      Feedback
+    </span></summary>
+    <div class="form-style-6">
+      <h1>Gib uns gern dein ehrliches Feedback zu dieser Methode!</h1>
+      <form>
+        Name: <input type="text" size="25" name="usrname">
+        <textarea rows="4" cols="50" name="comment" placeholder="Dein Feedback..."></textarea>
+        <input type="button" value="Absenden"  onclick="check1(this.form)"  id="Knopf">
+      </form>
+      <br>
+    </div>
+  </details>
+  <br>
+  <br>
+  <br>
+</div>
+
+<div class="side"><div class="form-style-6">
+      <h1>Hast du eine Methode, die du mit uns teilen willst? Dann kannst du sie uns hier schicken!</h1>
+      <form>
+        Bezeichnung: <input type="text" size="25" name="usrname">
+        Beschreibung: <textarea rows="6" cols="50" name="comment" placeholder="Beschreibung der Methode..."></textarea>
+        Zusätzliche Dateien: (Bilder, Materialien...) <input type="file">
+        <input type="button" value="Absenden"  onclick="sendbutton()"  id="send">
+      </form>
+      <br>
+    </div>
+</div>
+
+</body>
+</html>
