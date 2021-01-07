@@ -17,6 +17,9 @@
       document.getElementById("feedback3").innerHTML = form.usrname.value + ": <br>" + form.comment.value;
       alert("Danke für dein Feedback!");
     }
+    function small(){
+      document.getElementById("newidea").style="visibility: hidden";
+    }
 
     function sendbutton(){
       alert("Danke für deinen Beitrag! Wir werden ihn so schnell wie möglich bearbeiten.");
@@ -84,7 +87,7 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
       Mehr erfahren...
     </span></summary>
     <br>
-    Bildet 4er Gruppen. Beginne für ___ Minuten all deine Sätze mit entweder:
+    Bildet 4er Gruppen. Beginne für 4 Minuten all deine Sätze mit entweder:
 <ul>
   <li>Ich</li>
   <li>Du</li>
@@ -93,7 +96,7 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
 </ul>
     Ihr versucht dabei ein Konfliktthema zu lösen, z.B.: ?<br>
 
-    Verteilt die 4 Rollen und diskutiert. Im Anschluss gibt es eine ___-minütige Reflexion.<br><br>
+    Verteilt die 4 Rollen und diskutiert. Im Anschluss gibt es eine 5-minütige Reflexion.<br><br>
 
     <strong>bisherige Kommentare:</strong><br>
     <div id="feedback3"></div>
@@ -163,10 +166,12 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
   <br>
 </div>
 
-<div class="side"><div class="form-style-6">
-      <h1>Hast du eine Methode, die du mit uns teilen willst? Dann kannst du sie uns hier schicken!</h1>
+<div class="side">
+  <button value="x"  onclick="small()" style="width:22px; height:20px">x</button>
+  <div class="form-style-6" id="newidea">
+  <h1>Hast du eine Methode, die du mit uns teilen willst? Dann kannst du sie uns hier schicken!</h1>
       <form>
-        Bezeichnung: <input type="text" size="25" name="usrname">
+        Bezeichnung: <input type="text" size="25" name="usrname" >
         Beschreibung: <textarea rows="6" cols="50" name="comment" placeholder="Beschreibung der Methode..."></textarea>
         Zusätzliche Dateien: (Bilder, Materialien...) <input type="file">
         <input type="button" value="Absenden"  onclick="sendbutton()"  id="send">
