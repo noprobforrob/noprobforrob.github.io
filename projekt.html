@@ -18,7 +18,10 @@
       alert("Danke für dein Feedback!");
     }
     function small(){
-      document.getElementById("newidea").style="visibility: hidden";
+      document.getElementById("newidea").style="visibility: hidden; width: 0px";
+    }
+    function big(){
+      document.getElementById("newidea").style="visibility: visible; width: 100%";
     }
 
     function sendbutton(){
@@ -168,6 +171,7 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
 
 <div class="side">
   <button value="x"  onclick="small()" style="width:22px; height:20px">x</button>
+  <button value="x"  onclick="big()" style="width:22px; height:20px">+</button>
   <div class="form-style-6" id="newidea">
   <h1>Hast du eine Methode, die du mit uns teilen willst? Dann kannst du sie uns hier schicken!</h1>
       <form>
