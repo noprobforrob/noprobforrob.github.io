@@ -17,6 +17,14 @@
       document.getElementById("feedback3").innerHTML = "<em>" + form.usrname.value + ": </em><br>" + form.comment.value;
       alert("Danke für dein Feedback!");
     }
+    function check4(form){
+        document.getElementById("feedback4").innerHTML = "<em>" + form.usrname.value + ": </em><br>" + form.comment.value;
+        alert("Danke für dein Feedback!");
+    }
+    function check5(form){
+        document.getElementById("feedback5").innerHTML = "<em>" + form.usrname.value + ": </em><br>" + form.comment.value;
+        alert("Danke für dein Feedback!");
+    }
     function small(){
       document.getElementById("newidea").style="visibility: hidden; width: 0px";
     }
@@ -28,16 +36,19 @@
       alert("Danke für deinen Beitrag! Wir werden ihn so schnell wie möglich bearbeiten.");
     }
     //Hier die Facts einfügen.
-    var facts = new Array("Ich,du,wir,man: <br><em>Eine Übung um sich bewusst zu werden, welche Auswirkung die Formulierung von Sätzen auf deren Bedeutung hat.</em",
+    var facts = new Array("Ich,du,wir,man: <br><em>Eine Übung um sich bewusst zu werden, welche Auswirkung die Formulierung von Sätzen auf deren Bedeutung hat.</em>",
+    "Ich-Botschaften anwenden: <br> <em>In dieser Übung soll das formulieren von ich-Botschaften geübt werden.</em>",
     "Aktives Zuhören: <br> <em>Übung mit Aussagen paraphrasieren, verbalisieren </em> ",
         "Ich-Botschaften: <br> <em>In dieser Übung werdet ihr erkennen, was es bedeutet wahre Gefühle auszudrücken, ohne dabei anderen anzuklagen.</em>"
         )
     //Links zu den weiterführenden Seiten
     var links = new Array("#komm_task2",
+        "#komm_task3",
         "#komm_task0",
         "#komm_task1",
     );
     var links_st = new Array("komm_task2",
+        "komm_task3",
         "komm_task0",
         "komm_task1",
     );
@@ -57,7 +68,7 @@
         a.click();
         document.body.removeChild(a);
         document.getElementById(links_st[i]).style = "background-color: #43D1AF";
-        setTimeout(function () {document.getElementById(links_st[i]).style="background: white"},3000);
+        setTimeout(function () {document.getElementById(links_st[i]).style="background: white"},2500);
     }
     document.getElementById("funfacts").innerHTML = facts[i];
   </script>
@@ -81,7 +92,10 @@
   <li><a href="#bez" style="text-decoration: none; color: black"><h2>Beziehungskultur</h2></a></li>
 </ul>
   <hr>
+
 <h2 id="komm">1. Kommunikation</h2>
+
+
 <h3 id="komm_task0">Aktives Zuhören</h3>
   <em>Übung mit Aussagen paraphrasieren, verbalisieren </em><br>
   <br>
@@ -124,6 +138,8 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
       <br>
     </div>
   </details>
+
+
 
     <h3 id="komm_task1">Ich-Botschaften</h3>
     <em>In dieser Übung werdet ihr erkennen, was es bedeutet wahre Gefühle auszudrücken, ohne dabei anderen anzuklagen.</em><br><br>
@@ -176,8 +192,26 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
         <strong>bisherige Kommentare:</strong><br>
         <em>best-teacher-ever:</em><br>
         Die Methode war echt super! Die werd ich jetzt mit all meinen Klassen verwenden!!!<br><br>
-        <div id="feedback3"></div>
+        <div id="feedback4"></div>
     </details>
+    <br>
+    <details class="feedback">
+        <summary><span>
+      Feedback
+    </span></summary>
+        <div class="form-style-6">
+            <h1>Gib uns gern dein ehrliches Feedback zu dieser Methode!</h1>
+            <form id="form3">
+                Name: <input type="text" size="25" name="usrname">
+                <textarea rows="4" cols="50" name="comment" placeholder="Dein Feedback..." form="form3"></textarea>
+                <input type="button" value="Absenden"  onclick="check4(this.form)"  id="Knopf">
+            </form>
+            <br>
+        </div>
+    </details>
+
+
+
     <br>
     <h3 id="komm_task3">Ich-Botschaften anwenden</h3>
     <em>In dieser Übung soll das formulieren von ich-Botschaften geübt werden.</em><br><br>
@@ -202,8 +236,6 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
             </li><br>
         </ul>
         <br>
-        <strong>Lösungen:</strong> 1a), 2b), 3b), 4c), 5c), 6c), 7d)
-        <br><br>
         <em>Zum Beispiel:</em>
         <strong>Satz:</strong> “Mich ärgert, dass ich diese Übung gemacht habe!”
 <br><br>
@@ -211,7 +243,7 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
         Dieses Wochenende war es sehr stressig mit den Hausaufgaben, weil ich bald zwei Schularbeiten habe und viel lernen muss. Dennoch habe ich die Hausübungen gemacht. Heute hat sich herausgestellt, dass der Lehrer die Übung verwechselt hat. Mich ärgert, dass ich diese Übung gemacht habe, weil ich die Zeit besser für das Lernen des Schularbeitenstoffs hätte nutzen können.
 <br><br>
         <strong>bisherige Kommentare:</strong><br><br>
-        <div id="feedback3"></div>
+        <div id="feedback5"></div>
     </details>
     <br>
     <details class="feedback">
@@ -220,10 +252,10 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
     </span></summary>
         <div class="form-style-6">
             <h1>Gib uns gern dein ehrliches Feedback zu dieser Methode!</h1>
-            <form id="form1">
+            <form id="form4">
                 Name: <input type="text" size="25" name="usrname">
-                <textarea rows="4" cols="50" name="comment" placeholder="Dein Feedback..." form="form1"></textarea>
-                <input type="button" value="Absenden"  onclick="check3(this.form)"  id="Knopf">
+                <textarea rows="4" cols="50" name="comment" placeholder="Dein Feedback..." form="form4"></textarea>
+                <input type="button" value="Absenden"  onclick="check5(this.form)"  id="Knopf">
             </form>
             <br>
         </div>
