@@ -27,12 +27,54 @@
     function sendbutton(){
       alert("Danke für deinen Beitrag! Wir werden ihn so schnell wie möglich bearbeiten.");
     }
+    //Hier die Facts einfügen.
+    var facts = new Array("Ich,du,wir,man: <br><em>Eine Übung um sich bewusst zu werden, welche Auswirkung die Formulierung von Sätzen auf deren Bedeutung hat.</em",
+    "Aktives Zuhören: <br> <em>Übung mit Aussagen paraphrasieren, verbalisieren </em> ",
+        "Ich-Botschaften: <br> <em>In dieser Übung werdet ihr erkennen, was es bedeutet wahre Gefühle auszudrücken, ohne dabei anderen anzuklagen.</em>"
+        )
+    //Links zu den weiterführenden Seiten
+    var links = new Array("#komm_task2",
+        "#komm_task0",
+        "#komm_task1",
+    );
+    var links_st = new Array("komm_task2",
+        "komm_task0",
+        "komm_task1",
+    );
+
+    var i = 0;
+
+    function nextfact() {
+        //Statement je nach Anzahl der Facts anpassen.
+        if(++i > 2)
+            i = 0;
+        document.getElementById("funfacts").innerHTML = facts[i] + " <br> <br> <input type=\"button\" value=\"Mehr zu dieser Übung\"  class=\"bbutton\" onclick=\"loadnext()\" >";
+    }
+    function loadnext(){
+        const a = document.createElement("a");
+        a.href = links[i];
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        document.getElementById(links_st[i]).style = "background-color: #43D1AF";
+        setTimeout(function () {document.getElementById(links_st[i]).style="background: white"},3000);
+    }
+    document.getElementById("funfacts").innerHTML = facts[i];
   </script>
 </head>
 <body style="background: aliceblue">
 
 <div class="wrapper">
   <div class="header"><div class="titleheader">METHODENKATALOG</div></div>
+<br>
+    <br>
+    <div>
+        <strong>Hast du Lust in deinem Unterricht eine neue Methode auszuprobieren? Dann lass dir hier eine zufällige anzeigen!</strong><br><br>
+        <span><input type="button" value="Neue Methode finden..."  class="bbutton" onclick="nextfact()" ></span>
+        <br>
+        <div id="funfacts"></div>
+    </div>
+
   <h1>Inhaltsverzeichnis</h1>
 <ul>
   <li><a href="#komm" style="text-decoration: none; color: black"><h2>Kommunikation</h2></a></li>
@@ -40,7 +82,7 @@
 </ul>
   <hr>
 <h2 id="komm">1. Kommunikation</h2>
-<h3>Aktives Zuhören</h3>
+<h3 id="komm_task0">Aktives Zuhören</h3>
   <em>Übung mit Aussagen paraphrasieren, verbalisieren </em><br>
   <br>
   <details class="feedback">
@@ -83,7 +125,75 @@ Nachfragen, Paraphrasieren, Verbalisieren, Zusammenfassen
     </div>
   </details>
 
-  <h3>Ich,du,wir,man</h3>
+    <h3 id="komm_task1">Ich-Botschaften</h3>
+    <em>In dieser Übung werdet ihr erkennen, was es bedeutet wahre Gefühle auszudrücken, ohne dabei anderen anzuklagen.</em><br><br>
+    <details class="feedback">
+        <summary><span>
+      Mehr erfahren...
+    </span></summary>
+        <br>
+        Ihr müsst versuchen aus den Sätzen (1-7) unten, jene zu finden, die lediglich die Gefühle der sprechenden Person darstellen. <br>
+        <ol>
+            <li>a) “Mich ärgert die Art, wie du mit anderen umgehst.”<br>
+                b) “Du benimmst dich wie ein Elefant im Porzellanladen.”<br>
+                c) “Interessieren dich die anderen nicht?”<br>
+                d) “Man sollte wenigsten die Gebote der Höflichkeit beachten.”<br>
+            </li><br>
+            <li>a) “Lach nicht so!”<br>
+                b) “Dein Lachen verunsichert mich.”<br>
+                c) “Du bist überheblich!”<br>
+                d) “Meinst du, dass man darüber lachen sollte?”<br>
+            </li><br>
+            <li>a) “Ich bin wirklich doof.”<br>
+                b) “Ich fühle, dass ich einen großen Fehler gemacht habe.”<br>
+                c) “Ich bin unzufrieden mit mir.”<br>
+            </li><br>
+            <li>a) “Ich fühle, dass du mich unterdrückst.”<br>
+                b) “Ich bin empört über dein Verhalten.”<br>
+                c) “Ich fühle mich dir unterlegen.”<br>
+            </li><br>
+            <li>a) “Eine Stunde habe ich warten müssen!”<br>
+                b) “Na endlich!”<br>
+                c) “Es ärgert mich, dass du erst jetzt kommst!”<br>
+                d) “Ich bin ganz durchgefroren.”<br>
+
+            </li><br>
+            <li>a) “Das ist eine schlechte Übung!”<br>
+                b) “Ich finde die Übung schlecht!”<br>
+                c) “Mich ärgert, dass ich diese Übung gemacht habe!”<br>
+            </li><br>
+            <li>a) “Lass das!”<br>
+                b) “Ärgere mich nicht schon wieder!”<br>
+                c) “Man tut das nicht!”<br>
+                d) “Ich mag das nicht!”<br>
+            </li><br>
+        </ol>
+<br>
+        <strong>Lösungen:</strong> 1a), 2b), 3b), 4c), 5c), 6c), 7d)
+        <br><br>
+
+        <strong>bisherige Kommentare:</strong><br>
+        <em>best-teacher-ever:</em><br>
+        Die Methode war echt super! Die werd ich jetzt mit all meinen Klassen verwenden!!!<br><br>
+        <div id="feedback3"></div>
+    </details>
+    <br>
+    <details class="feedback">
+        <summary><span>
+      Feedback
+    </span></summary>
+        <div class="form-style-6">
+            <h1>Gib uns gern dein ehrliches Feedback zu dieser Methode!</h1>
+            <form id="form1">
+                Name: <input type="text" size="25" name="usrname">
+                <textarea rows="4" cols="50" name="comment" placeholder="Dein Feedback..." form="form1"></textarea>
+                <input type="button" value="Absenden"  onclick="check3(this.form)"  id="Knopf">
+            </form>
+            <br>
+        </div>
+    </details>
+
+  <h3 id="komm_task2">Ich,du,wir,man</h3>
   <em>Eine Übung um sich bewusst zu werden, welche Auswirkung die Formulierung von Sätzen auf deren Bedeutung hat.</em><br><br>
   <details class="feedback">
     <summary><span>
