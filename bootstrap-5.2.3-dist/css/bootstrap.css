@@ -10899,7 +10899,7 @@ body {
   transition: all 1s;
 }
 .tag.visible {
-  opacity: 0.97 !important;
+  opacity: 0.97;
   transform: translate(0, 0);
 }
 
