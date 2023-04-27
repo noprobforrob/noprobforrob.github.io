@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/bootstrap-5.2.3-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <title>Diklusion</title>
+
+    <script id="rendered-js">
+        $(document).on("scroll", function () {
+            var pageTop = $(document).scrollTop();
+            var pageBottom = pageTop + $(window).height();
+            var tags = $(".tag");
+
+            for (var i = 0; i < tags.length; i++) {
+                var tag = tags[i];
+
+                if ($(tag).position().top < pageBottom) {
+                    $(tag).addClass("visible");
+                } else {
+                    $(tag).removeClass("visible");
+                }
+            }window.CP.exitedLoop(0);
+        });
+        //# sourceURL=pen.js
+    </script>
+</head>
+<body>
+<div class="container-fluid position-relative align-content-lg-center" style="height: 100vh; background-color: #34383c; border-color: #4d5154; border-style: solid; color: #fefefe; z-index: -2;">
+    <div class="position-absolute top-50 start-50 translate-middle"><h1 style="scale: 200%; font-family: 'Brush Script MT'">Diklusion</h1></div>
+</div>
+<br>
+<br>
+<div class="tag" style="min-height: 100vh;">
+        <div class="container-md">
+        <div class="card">
+            <div class="card-body">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper sapien sed lectus egestas, sit amet dictum urna hendrerit. Sed tempus, ante non mollis bibendum, turpis elit mattis metus, quis mollis ex leo suscipit nisl. Morbi vitae orci ornare, dapibus nisl eget, semper orci. Fusce et neque interdum, suscipit risus a, vehicula ex. Praesent volutpat est eros, in facilisis libero scelerisque at. Aenean non pharetra justo. Vestibulum in egestas dui. Donec sed ante vitae felis accumsan aliquam gravida a ante. Cras efficitur dictum ex eu fermentum. Mauris varius a mi in maximus. Mauris id tortor sed enim scelerisque accumsan non nec orci.
+            </div>
+            <div class="card-body">
+            In placerat, arcu id ornare molestie, ex dolor lobortis turpis, quis molestie justo justo vitae tortor. Morbi sit amet dolor libero. Ut commodo felis id semper ultrices. Vestibulum consectetur eleifend diam, eget porta nibh aliquam et. Aenean nibh augue, bibendum at elementum commodo, tristique quis leo. Phasellus rhoncus ligula venenatis quam accumsan pretium. Cras dapibus lacinia orci eget luctus. Ut ultricies urna eget mollis ullamcorper. Curabitur id rutrum erat, nec ullamcorper augue. Nam ornare facilisis leo at cursus. Nunc lorem nisi, eleifend id odio vitae, elementum luctus dui. Quisque id vehicula sapien. Sed at posuere elit. Donec posuere venenatis ipsum et laoreet. Quisque eu mattis ligula. Nulla condimentum varius turpis, condimentum placerat sem molestie vitae.
+                </div>
+        </div>
+        </div>
+</div><div class="tag" style="min-height: 100vh;">
+    <div class="container-md">
+        <div class="card">
+            <div class="card-body">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper sapien sed lectus egestas, sit amet dictum urna hendrerit. Sed tempus, ante non mollis bibendum, turpis elit mattis metus, quis mollis ex leo suscipit nisl. Morbi vitae orci ornare, dapibus nisl eget, semper orci. Fusce et neque interdum, suscipit risus a, vehicula ex. Praesent volutpat est eros, in facilisis libero scelerisque at. Aenean non pharetra justo. Vestibulum in egestas dui. Donec sed ante vitae felis accumsan aliquam gravida a ante. Cras efficitur dictum ex eu fermentum. Mauris varius a mi in maximus. Mauris id tortor sed enim scelerisque accumsan non nec orci.
+            </div>
+            <div class="card-body">
+                In placerat, arcu id ornare molestie, ex dolor lobortis turpis, quis molestie justo justo vitae tortor. Morbi sit amet dolor libero. Ut commodo felis id semper ultrices. Vestibulum consectetur eleifend diam, eget porta nibh aliquam et. Aenean nibh augue, bibendum at elementum commodo, tristique quis leo. Phasellus rhoncus ligula venenatis quam accumsan pretium. Cras dapibus lacinia orci eget luctus. Ut ultricies urna eget mollis ullamcorper. Curabitur id rutrum erat, nec ullamcorper augue. Nam ornare facilisis leo at cursus. Nunc lorem nisi, eleifend id odio vitae, elementum luctus dui. Quisque id vehicula sapien. Sed at posuere elit. Donec posuere venenatis ipsum et laoreet. Quisque eu mattis ligula. Nulla condimentum varius turpis, condimentum placerat sem molestie vitae.
+            </div>
+        </div>
+    </div>
+</div><div class="tag" style="min-height: 100vh;">
+    <div class="container-md">
+        <div class="card">
+            <div class="card-body">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper sapien sed lectus egestas, sit amet dictum urna hendrerit. Sed tempus, ante non mollis bibendum, turpis elit mattis metus, quis mollis ex leo suscipit nisl. Morbi vitae orci ornare, dapibus nisl eget, semper orci. Fusce et neque interdum, suscipit risus a, vehicula ex. Praesent volutpat est eros, in facilisis libero scelerisque at. Aenean non pharetra justo. Vestibulum in egestas dui. Donec sed ante vitae felis accumsan aliquam gravida a ante. Cras efficitur dictum ex eu fermentum. Mauris varius a mi in maximus. Mauris id tortor sed enim scelerisque accumsan non nec orci.
+            </div>
+            <div class="card-body">
+                In placerat, arcu id ornare molestie, ex dolor lobortis turpis, quis molestie justo justo vitae tortor. Morbi sit amet dolor libero. Ut commodo felis id semper ultrices. Vestibulum consectetur eleifend diam, eget porta nibh aliquam et. Aenean nibh augue, bibendum at elementum commodo, tristique quis leo. Phasellus rhoncus ligula venenatis quam accumsan pretium. Cras dapibus lacinia orci eget luctus. Ut ultricies urna eget mollis ullamcorper. Curabitur id rutrum erat, nec ullamcorper augue. Nam ornare facilisis leo at cursus. Nunc lorem nisi, eleifend id odio vitae, elementum luctus dui. Quisque id vehicula sapien. Sed at posuere elit. Donec posuere venenatis ipsum et laoreet. Quisque eu mattis ligula. Nulla condimentum varius turpis, condimentum placerat sem molestie vitae.
+            </div>
+        </div>
+    </div>
+</div><div class="tag" style="min-height: 100vh;">
+    <div class="container-md">
+        <div class="card">
+            <div class="card-body">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper sapien sed lectus egestas, sit amet dictum urna hendrerit. Sed tempus, ante non mollis bibendum, turpis elit mattis metus, quis mollis ex leo suscipit nisl. Morbi vitae orci ornare, dapibus nisl eget, semper orci. Fusce et neque interdum, suscipit risus a, vehicula ex. Praesent volutpat est eros, in facilisis libero scelerisque at. Aenean non pharetra justo. Vestibulum in egestas dui. Donec sed ante vitae felis accumsan aliquam gravida a ante. Cras efficitur dictum ex eu fermentum. Mauris varius a mi in maximus. Mauris id tortor sed enim scelerisque accumsan non nec orci.
+            </div>
+            <div class="card-body">
+                In placerat, arcu id ornare molestie, ex dolor lobortis turpis, quis molestie justo justo vitae tortor. Morbi sit amet dolor libero. Ut commodo felis id semper ultrices. Vestibulum consectetur eleifend diam, eget porta nibh aliquam et. Aenean nibh augue, bibendum at elementum commodo, tristique quis leo. Phasellus rhoncus ligula venenatis quam accumsan pretium. Cras dapibus lacinia orci eget luctus. Ut ultricies urna eget mollis ullamcorper. Curabitur id rutrum erat, nec ullamcorper augue. Nam ornare facilisis leo at cursus. Nunc lorem nisi, eleifend id odio vitae, elementum luctus dui. Quisque id vehicula sapien. Sed at posuere elit. Donec posuere venenatis ipsum et laoreet. Quisque eu mattis ligula. Nulla condimentum varius turpis, condimentum placerat sem molestie vitae.
+            </div>
+        </div>
+    </div>
+</div>
+<svg class="red-thread" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="80", cy="80" , r="80" fill="#ff0000"></circle>
+    <g transform="translate(0,30)">
+    <path        d="M 4.9473602,14.767792 C 59.256299,14.240504 113.56375,13.713231 147.34875,40.342112 c 33.785,26.628881 47.04793,80.409258 36.83075,154.622858 -10.21717,74.21361 -43.9122,168.85653 -56.63723,258.62536 -12.72502,89.76883 -4.48051,174.65738 -7.34876,232.12947 -2.86826,57.47209 -16.84809,87.52578 -36.92105,93.19388 -20.072955,5.6681 -46.240404,-13.04962 -52.962822,-38.22708 -6.722418,-25.17747 6.002792,-56.81288 29.573555,-65.77664 23.570763,-8.96375 57.982687,4.745 79.489747,51.67352 21.50706,46.92853 30.11005,127.0718 29.57194,188.10329 -0.53812,61.0315 -10.21648,102.94863 -10.84332,151.45823 -0.62684,48.5097 7.79691,103.6082 9.23044,167.8038 1.43354,64.1956 -4.12256,137.4845 -0.62713,212.4893 3.49542,75.0049 16.04146,151.7212 22.22458,190.2108 6.18312,38.4896 6.00369,38.7534 5.82507,39.016"
+                 stroke="#ff0000" stroke-width="3" fill="none" style="scale: 150%" />
+    </g>
+</svg>
+</body>
+</html>
