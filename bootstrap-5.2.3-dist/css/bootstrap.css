@@ -10911,7 +10911,7 @@ body {
 .img-comp-container {
   position: relative;
   height: 200px; /*should be the same height as the images*/
-  width: 350px;
+  width: 300px;
   border: 2px solid black;
   border-radius: 10px;
 }
