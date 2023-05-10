@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/bootstrap-5.2.3-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/font-awesome.min.css">
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <title>Diklusion</title>
@@ -225,19 +226,41 @@
                 <li>Mit verschiedenen Tools wie „Book Creator“, „Canva“ oder „Worksheetcrafter“ können multimediale Arbeitsmaterialen gestaltet werden. Durch die Nutzung mehrerer Sinne mit Bilder, Videos und Ton können Lernende besser angesprochen werden.
                 Eine Liste mit der von uns empfohlenen Tools finden Sie in unserer <a href="#Toolbox">Tool-Box</a></li>
             </ul>
-               <p>Generell gibt es mehrere wichtige Punkte bei der Barrierefreiheit. Natürlich ist Barrierefreiheit bei Unterrichtsmaterial immer nur das Tüpfelchen auf dem i, einmal erstellt können die Materialien aber zukünftig weiter genutzt werden. Zu den wichtigen Prinzipien der Materialien gehören:</p>
-                <ul style="font-size: 1.2rem">
-                    <li>Breite Nutzbarkeit: Die Materialien sollten für Lernende mit unterschiedlichen Fähigkeiten nutzbar beziehungsweise zugänglich sein. Die Unterlagen stehen rechtzeitig und möglichst digital für die Schüler*innen zur Verfügung.</li>
-                    <li>Flexibilität in der Nutzung: Die Lernenden können innerhalb der Materialien nochmal verschiedene Medien und Methoden auswählen (z.B. schriftliche Unterlagen, Videos, Tonaufnahmen etc.)</li>
-                    <li>Einfache und intuitive Nutzung: Komplexe Unterlagen werden vermieden. Die Arbeitsanleitungen sind klar und deutlich verständlich, unabhängig der Fähigkeiten.</li>
-                    <li>Sensorisch wahrnehmbare Informationen: Alle Informationen sollen so kommuniziert werden, dass unabhängig von ihren sensorischen Fähigkeiten alle Lernenden diese verstehen und darauf zugreifen können.</li>
-                    <li>Fehlertoleranz: Die Lernenden haben unterschiedliche Lerngeschwindigkeiten, Vorkenntnisse und Fähigkeiten. Diese sollten auch in Prüfungssituationen je nach gesetzlichem Rahmen nutzbar gemacht werden.</li>
-                    <li>Niedriger körperlicher Aufwand: Jede nicht erforderliche körperliche Anstrengung sollte vermieden werden, damit die Aufmerksamkeit erhalten werden kann.</li>
-                    <li>Größe und Platz für Zugang und Benutzung: Die Materialien sollten jederzeit verfügbar und einfach handhabbar sein.</li>
-                    <li>Lerngemeinschaft: Die Unterstützung und Kommunikation der Lerngemeinschaft mit eingeschränkten Lernenden können diese positiv beeinflussen.</li>
-                    <li>Lernklima: Eine einladende und inklusiv gestaltete Unterrichtseinheit fördert die Barrierefreiheit.</li>
-                </ul>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#barrierefrei-zusatz">
+                    Mehr erfahren
+                </button>
+               <p>Generell gibt es mehrere wichtige Punkte bei der Barrierefreiheit. Natürlich ist Barrierefreiheit bei Unterrichtsmaterial immer nur das Tüpfelchen auf dem i, einmal erstellt können die Materialien aber zukünftig weiter genutzt werden.
                 Quelle: Barrierefreiheit durch Digitalisierung. (o. D.). <a href="https://erwachsenenbildung.at/themen/barrierefreie-eb/barrierefreiheit-in-der-praxis/digitalisierung.php">https://erwachsenenbildung.at/themen/barrierefreie-eb/barrierefreiheit-in-der-praxis/digitalisierung.php</a>, zugegriffen am 09.05.2023.
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="barrierefrei-zusatz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Grundprinzipien</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Zu den wichtigen Prinzipien der Materialien gehören:</p>
+                    <ul style="font-size: 1.2rem">
+                        <li>Breite Nutzbarkeit: Die Materialien sollten für Lernende mit unterschiedlichen Fähigkeiten nutzbar beziehungsweise zugänglich sein. Die Unterlagen stehen rechtzeitig und möglichst digital für die Schüler*innen zur Verfügung.</li>
+                        <li>Flexibilität in der Nutzung: Die Lernenden können innerhalb der Materialien nochmal verschiedene Medien und Methoden auswählen (z.B. schriftliche Unterlagen, Videos, Tonaufnahmen etc.)</li>
+                        <li>Einfache und intuitive Nutzung: Komplexe Unterlagen werden vermieden. Die Arbeitsanleitungen sind klar und deutlich verständlich, unabhängig der Fähigkeiten.</li>
+                        <li>Sensorisch wahrnehmbare Informationen: Alle Informationen sollen so kommuniziert werden, dass unabhängig von ihren sensorischen Fähigkeiten alle Lernenden diese verstehen und darauf zugreifen können.</li>
+                        <li>Fehlertoleranz: Die Lernenden haben unterschiedliche Lerngeschwindigkeiten, Vorkenntnisse und Fähigkeiten. Diese sollten auch in Prüfungssituationen je nach gesetzlichem Rahmen nutzbar gemacht werden.</li>
+                        <li>Niedriger körperlicher Aufwand: Jede nicht erforderliche körperliche Anstrengung sollte vermieden werden, damit die Aufmerksamkeit erhalten werden kann.</li>
+                        <li>Größe und Platz für Zugang und Benutzung: Die Materialien sollten jederzeit verfügbar und einfach handhabbar sein.</li>
+                        <li>Lerngemeinschaft: Die Unterstützung und Kommunikation der Lerngemeinschaft mit eingeschränkten Lernenden können diese positiv beeinflussen.</li>
+                        <li>Lernklima: Eine einladende und inklusiv gestaltete Unterrichtseinheit fördert die Barrierefreiheit.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zurück</button>
+                </div>
             </div>
         </div>
     </div>
