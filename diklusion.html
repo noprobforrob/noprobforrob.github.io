@@ -269,25 +269,85 @@
         </div>
     </div>
 
+<script>
+    function toolbar(form) {
+        if(form.barrierefrei.checked){
+            let tmp = document.getElementsByClassName("bfrei");
+            for(let i=0; i < tmp.length; i++){
+                tmp[i].classList.add("visible");
+            }
+        } else {
+            let tmp = document.getElementsByClassName("bfrei");
+        for(let i=0; i < tmp.length; i++) {
+            tmp[i].classList.remove("visible");
+        }
+        }
+
+        if(form.sprache.checked){
+            let tmp = document.getElementsByClassName("sprache");
+            for(let i=0; i < tmp.length; i++){
+                tmp[i].classList.add("visible");
+            }
+        } else {
+            let tmp = document.getElementsByClassName("sprache");
+            for(let i=0; i < tmp.length; i++) {
+                tmp[i].classList.remove("visible");
+            }
+        }
+        if(form.gestaltung.checked){
+            let tmp = document.getElementsByClassName("gestaltung");
+            for(let i=0; i < tmp.length; i++){
+                tmp[i].classList.add("visible");
+            }
+        } else {
+            let tmp = document.getElementsByClassName("gestaltung");
+            for(let i=0; i < tmp.length; i++) {
+                tmp[i].classList.remove("visible");
+            }
+        }
+        if(form.leben.checked){
+            let tmp = document.getElementsByClassName("leben");
+            for(let i=0; i < tmp.length; i++){
+                tmp[i].classList.add("visible");
+            }
+        } else {
+            let tmp = document.getElementsByClassName("leben");
+            for(let i=0; i < tmp.length; i++) {
+                tmp[i].classList.remove("visible");
+            }
+        }
+    }
 
 
+</script>
     <br>
 </div>
 <section id="Toolbox" style="background-color: #F7ECE1">
     <br>
     <div class="container-sm">
         <h1>Tool-Box</h1>
-    <label for="exampleDataList" class="form-label">Suchen:</label>
-    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width: 50%">
-    <datalist id="datalistOptions">
-        <option value="Sehen">
-        <option value="Barrierefreiheit">
-        <option value="Gehör">
-    </datalist>
-    </div>
+        <form action="#Toolbox">
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" role="switch" id="barrierefrei">
+                <label class="form-check-label" for="barrierefrei">Barrierefreiheit</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" role="switch" id="gestaltung">
+                <label class="form-check-label" for="gestaltung">Gestaltung</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" role="switch" id="leben">
+                <label class="form-check-label" for="leben">Lebenswirklichkeit</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" role="switch" id="sprache">
+                <label class="form-check-label" for="sprache">Sprache</label>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="toolbar(this.form)">Filtern</button>
+        </form>
     <br>
     <div class="container text-center">
-        <div class="row">
+        <div class="row sprache">
             <div class="col-sm-4">
                 <div class="card" style="height: 100%; min-height: 100px; background-color: #8D86C9;"><h1 class="align-self-center text-white"><br>Chat-GPT</h1></div>
             </div>
@@ -323,7 +383,7 @@
                 </div>
             </div>
         </div><br>
-        <div class="row">
+        <div class="row bfrei">
             <div class="col-sm-4">
                 <div class="card" style="height: 100%; min-height: 100px; background-color: #8D86C9;"><h1 class="align-self-center text-white text-break"><br>Worksheetcrafter</h1></div>
             </div>

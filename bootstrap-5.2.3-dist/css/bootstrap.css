@@ -10904,6 +10904,53 @@ body {
   opacity: 0.97;
   transform: translate(0, 0);
 }
+.bfrei {
+  opacity: 0;
+  max-height: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+.bfrei.visible {
+  opacity: 0.97;
+  max-height: 100%;
+  transform: translate(0, 0);
+}
+
+.sprache {
+  opacity: 0;
+  max-height: 0;
+  transform: translate(0, 10vh);
+  transition: all 0.8s;
+}
+.sprache.visible {
+  opacity: 1;
+  max-height: 100%;
+  transform: translate(0, 0);
+}
+
+.gestaltung {
+  opacity: 0;
+  max-height: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+.gestaltung.visible {
+  opacity: 1;
+  max-height: 100%;
+  transform: translate(0, 0);
+}
+
+.leben {
+  opacity: 0;
+  max-height: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+.leben.visible {
+  opacity: 1;
+  max-height: 100%;
+  transform: translate(0, 0);
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
 
