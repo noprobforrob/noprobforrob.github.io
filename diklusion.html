@@ -49,7 +49,7 @@
                 /* Insert slider */
                 img.parentElement.insertBefore(slider, img);
                 /* Position the slider in the middle: */
-                slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                slider.style.top = 0 + "px";
                 slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
                 /* Execute a function when the mouse button is pressed: */
                 slider.addEventListener("mousedown", slideReady);
@@ -174,15 +174,16 @@
                     Wichtig sind ein hoher Kontrast und das Vermeiden der Kombination von rot und grün.
                     Im Internet gibt es viele Tools, die einem eine passende Farbpalette aus 5 bis 6 Farben zusammenstellen. </p>
             </div>
-                <div class="img-comp-container align-self-center"><br>
-                    <div class="img-comp-img">
-                        <img src="img.png" width="295px" height="157" alt="Subjekt und Prädikat farblich mit rot und grün kodiert.">
+            <div class="align-self-center">
+                <div class="img-comp-container img-fluid"><br>
+                    <div class="img-comp-img img-fluid">
+                        <img src="rot-grün.png"  width="400" max-height="320" alt="Subjekt und Prädikat farblich mit rot und grün kodiert.">
                     </div>
-                    <div class="img-comp-img img-comp-overlay">
-                        <img src="img_1.png" width="295px" height="157" alt="Subjekt und Prädikat aus Sicht einer Person mit rot-grün Schwäche in sehr ähnlichen braun Tönen.">
+                    <div class="img-comp-img img-comp-overlay img-fluid">
+                        <img src="rot-grün-schwäche.png" width="400" max-height="320" alt="Subjekt und Prädikat aus Sicht einer Person mit rot-grün Schwäche in sehr ähnlichen braun Tönen.">
                     </div>
                 </div>
-
+            </div>
                 <script>
                     initComparisons();
                 </script>
