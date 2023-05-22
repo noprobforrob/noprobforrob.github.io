@@ -10887,7 +10887,7 @@ body {
   top: 75vh;
   padding-left: 10px;
   width: 100%;
-  height: 600vh;
+  height: 700vh;
   max-height: 100%;
   z-index: -1;
 }
@@ -10907,48 +10907,56 @@ body {
 .bfrei {
   opacity: 0;
   max-height: 0;
+  visibility: hidden;
   transform: translate(0, 10vh);
   transition: all 1s;
 }
 .bfrei.visible {
   opacity: 0.97;
   max-height: 100%;
+  visibility: visible;
   transform: translate(0, 0);
 }
 
 .sprache {
   opacity: 0;
   max-height: 0;
+  visibility: hidden;
   transform: translate(0, 10vh);
   transition: all 0.8s;
 }
 .sprache.visible {
   opacity: 1;
   max-height: 100%;
+  visibility: visible;
   transform: translate(0, 0);
 }
 
 .gestaltung {
   opacity: 0;
   max-height: 0;
+  visibility: hidden;
   transform: translate(0, 10vh);
   transition: all 1s;
 }
 .gestaltung.visible {
   opacity: 1;
   max-height: 100%;
+  visibility: visible;
   transform: translate(0, 0);
 }
 
 .leben {
   opacity: 0;
   max-height: 0;
+  visibility: hidden;
   transform: translate(0, 10vh);
   transition: all 1s;
 }
 .leben.visible {
   opacity: 1;
   max-height: 100%;
+  visibility: visible;
   transform: translate(0, 0);
 }
 
