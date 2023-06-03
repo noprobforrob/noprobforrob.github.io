@@ -10904,6 +10904,17 @@ body {
   opacity: 0.97;
   transform: translate(0, 0);
 }
+
+@media (prefers-reduced-motion) {
+  .tag {
+    opacity: 1;
+  }
+  .tag.visible {
+    animation: none !important;
+  }
+}
+
+
 .bfrei {
   opacity: 0;
   max-height: 0;
