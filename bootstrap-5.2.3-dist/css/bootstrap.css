@@ -11007,3 +11007,7 @@ body {
   background-color: #2196F3;
   opacity: 0.9;
 }
+
+.question-btn{
+  min-height: 30vh !important;
+}
