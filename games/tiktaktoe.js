@@ -1,8 +1,6 @@
 let gamestarted = false;
 let canvas = document.getElementById("game-canvas");
 let ctx = canvas.getContext("2d");
-let leftcv = canvas.offsetLeft + canvas.clientLeft;
-let topcv = canvas.offsetTop + canvas.clientTop;
 let w = canvas.width;
 let h = canvas.height;
 let filled = [[0,0,0],[0,0,0],[0,0,0]];
@@ -47,8 +45,9 @@ drawfield();
 
 canvas.addEventListener('click', function(e) {
     if(gamestarted){
-            let x = e.pageX - leftcv;
-            let y = e.pageY - topcv;
+            const rect = canvas.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            let y = e.clientY - rect.top;
             let col;
             let row;
             if(x<w/3){
