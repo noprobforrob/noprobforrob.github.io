@@ -4,7 +4,7 @@ let ctx = canvas.getContext("2d");
 let w = canvas.width;
 let h = canvas.height;
 let filled = [[0,0,0],[0,0,0],[0,0,0]];
-
+let count = 0;
 
 class play{
     constructor(symbol) {
@@ -82,6 +82,7 @@ canvas.addEventListener('click', function(e) {
                 player1.pos[col][row] = 1;
                 document.getElementById("instructions").innerHTML = "Spieler 2 am Zug!";
                 player1.checkwinner();
+                count++;
             }
             else if(!filled[col][row]) {
                 ctx.drawImage(yimg, x + 10, y + 10, w / 3 - 20, h / 3 - 20);
@@ -91,9 +92,16 @@ canvas.addEventListener('click', function(e) {
                 player2.pos[col][row] = 1;
                 document.getElementById("instructions").innerHTML = "Spieler 1 am Zug!";
                 player2.checkwinner();
+                count++;
             }
             else
                 alert("Already taken!");
+            if(count==9 && gamestarted){
+                alert("Unentschieden");
+                gamestarted = false;
+                document.getElementById("start-btn").innerText = "Noch einmal spielen!";
+                document.getElementById("instructions").innerHTML = "Unentschieden!";
+            }
     }
 },false);
 function startgame() {
@@ -102,6 +110,7 @@ function startgame() {
     filled = [[0,0,0],[0,0,0],[0,0,0]];
     player1.pos = [[0,0,0],[0,0,0],[0,0,0]];
     player2.pos = [[0,0,0],[0,0,0],[0,0,0]];
+    count = 0;
     player1.turn = true;
     gamestarted = true;
     document.getElementById("instructions").innerHTML = "Spieler 1 am Zug!";
