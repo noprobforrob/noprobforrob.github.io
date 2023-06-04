@@ -10,22 +10,22 @@
     <h1 class="text-center">Tik-Tak-Toe</h1><br>
     <h2 class="text-center" id="instructions">Drücke auf "Spiel starten"!</h2>
     <div class="d-flex justify-content-center">
-        <canvas width="500px" height="500px" class="bg-white" style="border: 4px solid black; border-radius: 2px; box-shadow: 5px 5px #6c757d " id="game-canvas">
+        <canvas width="550px" height="550px" class="bg-white" style="border: 4px solid black; border-radius: 2px; box-shadow: 5px 5px #6c757d " id="game-canvas">
         </canvas>
     </div>
     <br>
     <script src="tiktaktoe.js"></script>
     <div class="d-flex justify-content-center">
-        <button class="btn btn-light align-self-center" onclick="startgame()" id="start-btn">Spiel starten</button>
+        <button class="btn btn-light align-self-center" onclick="startgame()" id="start-btn"><h3>Spiel starten</h3></button>
     </div>
 </div>
 <div class="container-fluid bg-primary bg-opacity-75 p-4" style="min-height: 105vh">
     <h1 class="text-center p-2 text-white">Quiz-Streak</h1>
     <h3 class="text-center text-white" id="instructions-quiz">Beantworte so viele Fragen wie möglich richtig!</h3>
     <div class="d-flex justify-content-center">
-        <div class="container-sm bg-white p-4 m-3" style="max-width: 900px; min-height: 70vh; border: 4px solid black; border-radius: 2px; box-shadow: 5px 5px #6c757d ">
+        <div class="container-sm bg-white p-4 m-3" style="max-width: 950px; min-height: 70vh; border: 4px solid black; border-radius: 2px; box-shadow: 5px 5px #6c757d ">
             <div class="row">
-                <div class="col-1 " id="fr1">1</div>
+                <div class="col-1" id="fr1">1</div>
                 <div class="col-1" id="fr2">2</div>
                 <div class="col-1" id="fr3">3</div>
                 <div class="col-1" id="fr4">4</div>
@@ -40,20 +40,20 @@
             <h3 id="frage">Frage</h3>
             <hr>
                 <div class="row h-50">
-                    <div class="btn btn-light btn-outline-dark col-6 question-btn" onclick="checkquestion(0)"><h5 id="antw-a">Antwort A</h5></div>
-                    <div class="btn btn-light btn-outline-dark col-6 question-btn" onclick="checkquestion(1)"><h5 id="antw-b">Antwort B</h5></div>
-                    <div class="btn btn-light btn-outline-dark col-6 question-btn" onclick="checkquestion(2)"><h5 id="antw-c">Antwort C</h5></div>
-                    <div class="btn btn-light btn-outline-dark col-6 question-btn" onclick="checkquestion(3)"><h5 id="antw-d">Antwort D</h5></div>
+                    <div class="btn btn-light btn-outline-dark col-6 question-btn p-4" onclick="checkquestion(0)"><h3 id="antw-a">Antwort A</h3></div>
+                    <div class="btn btn-light btn-outline-dark col-6 question-btn p-4" onclick="checkquestion(1)"><h3 id="antw-b">Antwort B</h3></div>
+                    <div class="btn btn-light btn-outline-dark col-6 question-btn p-4" onclick="checkquestion(2)"><h3 id="antw-c">Antwort C</h3></div>
+                    <div class="btn btn-light btn-outline-dark col-6 question-btn p-4" onclick="checkquestion(3)"><h3 id="antw-d">Antwort D</h3></div>
                 </div>
             <br>
             <h4 id="ergebnis"></h4>
-            <div class="btn btn-success invisible" id="next-qu" onclick="nextquestion(questions)">Korrekt! Nächste Frage</div>
+            <div class="btn btn-success invisible" id="next-qu" onclick="nextquestion(questions)"><h4>Korrekt! Nächste Frage</h4> </div>
         </div>
     </div>
     <script src="question.js"></script>
     <br>
     <div class="d-flex justify-content-center">
-        <button class="btn btn-light align-self-center" onclick="startquiz()" id="start-btn-quiz">Spiel starten</button>
+        <button class="btn btn-light align-self-center" onclick="startquiz()" id="start-btn-quiz"><h3>Spiel starten</h3></button>
     </div>
 </div>
 </body>
