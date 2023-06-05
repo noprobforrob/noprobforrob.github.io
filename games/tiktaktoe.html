@@ -63,5 +63,53 @@
         <button class="btn btn-dark invisible" id="next-player" onclick="nextplayer()"><h4>> Nächster Spieler</h4></button>
     </div>
 </div>
+
+<div class="container-fluid bg-danger bg-opacity-50 p-4" style="min-height: 105vh">
+    <h1 class="text-center p-2 ">Herden-Mentalität</h1>
+    <h2><i class="fa-solid fa-circle-info"></i></h2>
+    <h3 class="text-center" id="instructions-cow">Überlege, was die meisten deiner Gruppe auf eine Frage antworten würden!</h3>
+    <div class="d-flex justify-content-center">
+        <div class="container-sm bg-white p-4 m-3 overflow-auto" style="max-width: 950px; min-height: 75vh; border: 4px solid black; border-radius: 2px; box-shadow: 5px 5px #6c757d ">
+            <br>
+            <hr>
+            <h2 id="frage-cow" style="min-height: 10vh">Frage</h2>
+            <hr>
+            <div class="row h-50">
+                <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-2 question-btn" onclick="getpoints(0)" id="cow0"><h4 id="hascow0"></h4><h3>Spieler 1 <br> Punkte:</h3><h3 id="pnkt-0"></h3></button>
+                <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-2 question-btn" onclick="getpoints(1)" id="cow1"><h4 id="hascow1"></h4><h3>Spieler 2 <br> Punkte:</h3><h3 id="pnkt-1"></h3></button>
+                <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-2 question-btn" onclick="getpoints(2)" id="cow2"><h4 id="hascow2"></h4><h3>Spieler 3 <br> Punkte:</h3><h3 id="pnkt-2"></h3></button>
+                <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-2 question-btn" onclick="getpoints(3)" id="cow3"><h4 id="hascow3"></h4><h3>Spieler 4 <br> Punkte:</h3><h3 id="pnkt-3"></h3></button>
+                <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-2 question-btn" onclick="getpoints(4)" id="cow4"><h4 id="hascow4"></h4><h3>Spieler 5 <br> Punkte:</h3><h3 id="pnkt-4"></h3></button>
+                <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-2 question-btn" onclick="getpoints(5)" id="cow5"><h4 id="hascow5"></h4><h3>Spieler 6 <br> Punkte:</h3><h3 id="pnkt-5"></h3></button>
+            </div>
+            <br>
+            <div class="btn btn-success" id="next-qu-cow" onclick="nextcowquestion()"><h4>Nächste Frage</h4> </div>
+            <hr>
+            <h2>Kuh vergeben</h2>
+            <form action="">
+                <div class="form-group">
+                    <label for="cowID">Spieler ID</label>
+                    <select multiple class="form-control" id="cowID">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div><br>
+                <button type="button" class="btn btn-outline-dark" onclick="placecow(this.form)">Kuh vergeben</button>
+            </form>
+            <br>
+        </div>
+    </div>
+    <script src="herd-game.js"></script>
+    <br>
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-light" onclick="startquiz()" id="start-btn-cow"><h4>Spiel starten</h4></button>
+        <div class="m-2"></div>
+        <button class="btn btn-dark invisible" id="next-player" onclick="nextplayer()"><h4>> Nächster Spieler</h4></button>
+    </div>
+</div>
 </body>
 </html>

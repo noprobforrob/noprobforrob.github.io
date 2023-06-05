@@ -33,7 +33,7 @@ function nextquestion(res) {
 
     let currentIndex = 4,  randomIndex;
     // While there remain elements to shuffle.
-    while (currentIndex != 0) {
+    for(currentIndex;currentIndex > 0;) {
         // Pick a remaining element.
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
