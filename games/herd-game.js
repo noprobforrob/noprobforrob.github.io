@@ -4,9 +4,10 @@ class cow{
         this.points = 0;
         this.kuh = false;
     }
-
 }
-let cows = [new cow(0), new cow(1), new cow(2)];
+let haskuh;
+let cows = [];
+cowqucount = 0;
 
 
 let herdquestions =[
@@ -70,9 +71,34 @@ function getpoints(numb) {
     }
 }
 function placecow(form){
-    document.getElementById("hascow"+form.cowID.value).innerHTML = '<i class="fa fa-cow"></i>'
+    document.getElementById("hascow"+(form.cowID.value-1)).innerHTML = '<i class="fa fa-cow"></i>'
+    cows[(form.cowID.value-1)].kuh = true;
+    haskuh = (form.cowID.value-1);
 }
 function nextcowquestion() {
+    ++cowqucount;
+    document.getElementById("frage-cow").innerText = herdquestions[cowqucount];
+    for(let j = 0; j< cows.length; j++){
+        document.getElementById("cow"+j).classList.remove("btn-success");
+    }
+}
 
+function startcow(form) {
+    cows = [];
+    document.getElementById("cowspieler").innerHTML = "";
+    for(let i = 0; i< form.anzspieler.value; i++){
+        document.getElementById("cowspieler").innerHTML += '<button class="btn btn-outline-dark col-6 col-sm-4 col-lg-2 question-btn" onclick="getpoints('+(i)+ ')" id="cow'+i+ '"><h4 id="hascow'+(i)+ '"></h4><h3>Spieler '+(i+1)+ '<br> Punkte:</h3><h3 id="pnkt-'+(i)+ '">0</h3></button>\n'
+        cows.push(new cow(i));
+    }
+    let currentIndex = herdquestions.length,  randomIndex;
+    for(currentIndex;currentIndex > 0;) {
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        // And swap it with the current element.
+        [herdquestions[currentIndex], herdquestions[randomIndex]] = [
+            herdquestions[randomIndex], herdquestions[currentIndex]];
+    }
+    document.getElementById("frage-cow").innerText = herdquestions[0];
 }
 
