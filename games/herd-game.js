@@ -5,7 +5,7 @@ class cow{
         this.kuh = false;
     }
 }
-let haskuh;
+let haskuh = 99;
 let cows = [];
 cowqucount = 0;
 
@@ -71,9 +71,16 @@ function getpoints(numb) {
     }
 }
 function placecow(form){
-    document.getElementById("hascow"+(form.cowID.value-1)).innerHTML = '<i class="fa fa-cow"></i>'
-    cows[(form.cowID.value-1)].kuh = true;
-    haskuh = (form.cowID.value-1);
+    if(haskuh === 99) {
+        document.getElementById("hascow" + (form.cowID.value - 1)).innerHTML = '<i class="fa fa-cow"></i>'
+        cows[(form.cowID.value - 1)].kuh = true;
+    } else {
+        document.getElementById("hascow" + (form.cowID.value - 1)).innerHTML = '<i class="fa fa-cow"></i>'
+        cows[(form.cowID.value - 1)].kuh = true;
+        cows[haskuh].kuh = false;
+        document.getElementById("hascow" + (haskuh)).innerHTML = '';
+    }
+    haskuh = (form.cowID.value - 1);
 }
 function nextcowquestion() {
     ++cowqucount;
@@ -85,6 +92,7 @@ function nextcowquestion() {
 
 function startcow(form) {
     cows = [];
+    haskuh = 99;
     document.getElementById("cowspieler").innerHTML = "";
     for(let i = 0; i< form.anzspieler.value; i++){
         document.getElementById("cowspieler").innerHTML += '<button class="btn btn-outline-dark col-6 col-sm-4 col-lg-2 question-btn" onclick="getpoints('+(i)+ ')" id="cow'+i+ '"><h4 id="hascow'+(i)+ '"></h4><h3>Spieler '+(i+1)+ '<br> Punkte:</h3><h3 id="pnkt-'+(i)+ '">0</h3></button>\n'
