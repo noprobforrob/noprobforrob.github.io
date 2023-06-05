@@ -93,9 +93,12 @@ function nextcowquestion() {
 function startcow(form) {
     cows = [];
     haskuh = 99;
-    document.getElementById("cowspieler").innerHTML = "";
+    document.getElementById("cowspieler").innerHTML = '';
+    document.getElementById("cowID").innerHTML = "";
     for(let i = 0; i< form.anzspieler.value; i++){
         document.getElementById("cowspieler").innerHTML += '<button class="btn btn-outline-dark col-6 col-sm-4 col-lg-2 question-btn" onclick="getpoints('+(i)+ ')" id="cow'+i+ '"><h4 id="hascow'+(i)+ '"></h4><h3>Spieler '+(i+1)+ '<br> Punkte:</h3><h3 id="pnkt-'+(i)+ '">0</h3></button>\n'
+        document.getElementById("cowID").innerHTML += '<option>'+(i+1)+'</option>';
+
         cows.push(new cow(i));
     }
     let currentIndex = herdquestions.length,  randomIndex;
