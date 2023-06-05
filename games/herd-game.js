@@ -8,6 +8,7 @@ class cow{
 let haskuh = 99;
 let cows = [];
 cowqucount = 0;
+let herdgamestarted = false;
 
 
 let herdquestions =[
@@ -71,6 +72,8 @@ function getpoints(numb) {
     }
 }
 function placecow(form){
+    if(!herdgamestarted)
+        return;
     if(haskuh === 99) {
         document.getElementById("hascow" + (form.cowID.value - 1)).innerHTML = '<i class="fa fa-cow"></i>'
         cows[(form.cowID.value - 1)].kuh = true;
@@ -83,6 +86,8 @@ function placecow(form){
     haskuh = (form.cowID.value - 1);
 }
 function nextcowquestion() {
+    if(!herdgamestarted)
+        return;
     ++cowqucount;
     document.getElementById("frage-cow").innerText = herdquestions[cowqucount];
     for(let j = 0; j< cows.length; j++){
@@ -93,6 +98,7 @@ function nextcowquestion() {
 function startcow(form) {
     cows = [];
     haskuh = 99;
+    herdgamestarted =true;
     document.getElementById("cowspieler").innerHTML = '';
     document.getElementById("cowID").innerHTML = "";
     for(let i = 0; i< form.anzspieler.value; i++){
