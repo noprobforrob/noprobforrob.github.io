@@ -6100,6 +6100,7 @@ textarea.form-control-lg {
   --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
+
 @media (max-width: 575.98px) {
   .offcanvas {
     --bs-offcanvas-width: 80vw;
@@ -6174,6 +6175,9 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 576px) {
+  .offcanvas {
+    --bs-offcanvas-width: 80vw !important;
+  }
   .offcanvas-sm {
     --bs-offcanvas-height: auto;
     --bs-offcanvas-border-width: 0;
@@ -6193,7 +6197,7 @@ textarea.form-control-lg {
 
 @media (max-width: 767.98px) {
   .offcanvas {
-    --bs-offcanvas-width: 80vw;
+    --bs-offcanvas-width: 80vw !important;
   }
   .offcanvas-md {
     position: fixed;
@@ -6356,6 +6360,9 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 992px) {
+  .offcanvas {
+    --bs-offcanvas-width: 40vw;
+  }
   .offcanvas-lg {
     --bs-offcanvas-height: auto;
     --bs-offcanvas-border-width: 0;
