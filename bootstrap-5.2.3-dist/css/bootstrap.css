@@ -6102,6 +6102,9 @@ textarea.form-control-lg {
 }
 
 @media (max-width: 575.98px) {
+  .offcanvas{
+    --bs-offcanvas-width: 80vw;
+  }
   .offcanvas-sm {
     position: fixed;
     bottom: 0;
