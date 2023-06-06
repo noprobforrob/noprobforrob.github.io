@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Spiel-Test</title>
     <link rel="stylesheet" href="../bootstrap.css">
-    <link rel="stylesheet" href="/fontawesome-free-6.4.0/css/solid.min.css"></link>
-    <link rel="stylesheet" href="/fontawesome-free-6.4.0/css/fontawesome.min.css"></script>
+    <script src="../bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="/fontawesome-free-6.4.0/css/solid.min.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.0/css/fontawesome.min.css">
 </head>
 <body>
 <div class="container-fluid bg-info bg-opacity-75 p-4" style="min-height: 100vh">
@@ -66,7 +67,41 @@
 
 <div class="container-fluid bg-danger bg-opacity-50 p-4" style="min-height: 105vh">
     <h1 class="text-center p-2 ">Herden-Mentalität</h1>
-    <h2><i class="fa-solid fa-circle-info"></i></h2>
+    <h2><i class="fa-solid fa-circle-info" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i></h2>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Spielregeln</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <ul>
+                    <li>Wähle aus, mit wie vielen Personen du spielst und starte das Spiel.</li>
+                    <li>Lest die angezeigte Frage vor. Jede Person überlegt sich, welcher Begriff von den meisten gewählt werden wird und schreibt diesen auf einem Zettel oder seinem Handy auf.
+                    </li>
+                    <li>Lest die aufgeschriebenen Begriffe vor und fasst sie zu Gruppen zusammen. Die Personen der größten Gruppe erhalten jeweils einen Punkt.
+                        Klickt dafür einmal auf die Felder der entsprechenden Spieler. Gibt es keine einzelne, größte Gruppe, so bekommt niemand einen Punkt.
+                    </li>
+                    <li>Gibt es genau (!) einen Spieler, der mit seinem Begriff alleine übrig bleibt und keine Gruppe bilden kann, so wird diesem Spieler die Kuh zugewiesen. Wähle dazu die Spieler Nummer aus und klicke auf "Kuh vergeben".
+                        Dieser Spieler behält die Kuh so lange, bis ein anderer Spieler die Kuh zugewiesen bekommt. Ein Spieler, der die Kuh hat, kann nicht gewinnen, auch wenn er die nötige Punktezahl erreicht.
+                    </li>
+                    <li>Klickt auf "nächste Frage" und gebt das Handy weiter, sodass immer eine andere Person die nächste Frage vorliest.
+                        Setzt das Spiel fort, bis eine Person 8 Punkte erreicht. (Dies wird nicht automatisch überprüft!)
+                    </li>
+                </ul>
+                <b>Beispiel:</b><br>
+                Frage: "Was ist die schönste Farbe?"<br>
+                Antworten: 5 mal rot, 3 mal grün, 1 mal gelb<br>
+                Auswertung: Alle mit der Antwort "grün" erhalten einen Punkt. Der Spieler, der "gelb" aufgeschrieben hat, bekommt die Kuh zugewiesen.<br><br>
+                Abwandlung: 3 mal rot, 3 mal grün, 1 mal gelb, 1 mal türkis <br>
+                Auswertung: Da es keine größte Gruppe gibt, bekommt niemand einen Punkt. Da es zwei Spieler gibt, die zu keiner Gruppe gehören, bekommt keiner die Kuh zugewiesen.<br>
+                <h4>Alternative für 2 Spieler</h4>
+                Testet, wie gut ihr euch gegenseitig kennt: Überlegt euch, was ihr persönlich antworten würdet und danach, was die andere Person antworten würde.
+            </div>
+        </div>
+    </div>
+
     <h3 class="text-center" id="instructions-cow">Überlege, was die meisten deiner Gruppe auf eine Frage antworten würden!</h3>
     <div class="d-flex justify-content-center">
         <div class="container-sm bg-white p-4 m-3 overflow-auto" style="max-width: 950px; min-height: 75vh; border: 4px solid black; border-radius: 2px; box-shadow: 5px 5px #6c757d ">
@@ -114,8 +149,9 @@
                 <div>
                     <input type="number" class="form-control form-control-lg" id="anzspieler" placeholder="Anzahl der Spieler">
                 </div>
-        <div class="m-2"></div>
-        <button type="button" class="btn btn-light" onclick="startcow(this.form)" id="start-btn-cow"><h4>Spiel starten</h4></button>
+            <div class="m-2"></div>
+            <button type="button" class="btn btn-light" onclick="startcow(this.form)" id="start-btn-cow"><h4>Spiel starten</h4></button>
+            </div>
         </form>
     </div>
 </div>
