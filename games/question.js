@@ -6,7 +6,7 @@ let btnactive = false;
 
 
 function startquiz() {
-document.getElementById("points-quiz").innerHTML = '<div class="col-1" id="fr1-'+ anzplayer +'">1</div>\n' +
+    document.getElementById("points-quiz").innerHTML = '<div class="col-1" id="fr1-'+ anzplayer +'">1</div>\n' +
     '                <div class="col-1" id="fr2-'+ anzplayer +'">2</div>\n' +
     '                <div class="col-1" id="fr3-'+ anzplayer +'">3</div>\n' +
     '                <div class="col-1" id="fr4-'+ anzplayer +'">4</div>\n' +
@@ -19,9 +19,17 @@ document.getElementById("points-quiz").innerHTML = '<div class="col-1" id="fr1-'
     '                <div class="col-12"></div>';
     document.getElementById("ergebnis").innerText = "";
     i = 0;
-    const req = fetch('https://the-trivia-api.com/v2/questions');
-    req.then(re =>{return re.json()}).then(res2 => {questions = res2;
-        nextquestion(questions);});
+    const req = fetch('https://the-trivia-api.com/v2/questions?categories=science,general_knowledge,food_and_drink,history,geography,art_and_literature&region=AT');
+    req.then(re =>{
+        if(re.ok)
+            return re.json();
+        else
+            throw new Error(`HTTP error, status = ${re.status}`);
+    }).then(res2 => {questions = res2;
+        nextquestion(questions);})
+    .catch(error => {
+        alert(error);
+    })
 }
 
 function nextquestion(res) {
