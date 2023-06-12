@@ -30,6 +30,7 @@ function startquiz() {
     .catch(error => {
         alert(error);
     })
+    document.getElementById("quiz").classList.remove("game-inactiv");
 }
 
 function nextquestion(res) {

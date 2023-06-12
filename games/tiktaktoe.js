@@ -104,6 +104,8 @@ canvas.addEventListener('click', function(e) {
             }
     }
 },false);
+
+
 function startgame() {
     ctx.reset();
     drawfield();
@@ -115,6 +117,7 @@ function startgame() {
     gamestarted = true;
     document.getElementById("instructions").innerHTML = "Spieler 1 am Zug!";
     document.getElementById("start-btn").innerText = "Neu starten";
+    document.getElementById("game-canvas").classList.remove("game-inactiv");
 }
 
 

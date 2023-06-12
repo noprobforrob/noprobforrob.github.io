@@ -11026,3 +11026,7 @@ body {
 .question-btn{
   min-height: 15vh !important;
 }
+
+.game-inactiv{
+  filter: blur(3px);
+}

@@ -117,5 +117,6 @@ function startcow(form) {
             herdquestions[randomIndex], herdquestions[currentIndex]];
     }
     document.getElementById("frage-cow").innerText = herdquestions[0];
+    document.getElementById("herden-mentalitaet").classList.remove("game-inactiv");
 }
 
