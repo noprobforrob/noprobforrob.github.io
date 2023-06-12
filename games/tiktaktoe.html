@@ -113,7 +113,7 @@
     <div class="d-flex justify-content-center">
         <form action="#anzspieler">
             <div class="form-group h3 row">
-                <div class="col-7">
+                <div class="col-8">
                     <label class="col-form-label col-form-label-lg" for="anzspieler">Spieler Anzahl</label>
                     <select class="form-control-lg h3 m-2" id="anzspieler">
                         <option>1</option>
@@ -138,30 +138,28 @@
                         <option>20</option>
                     </select>
                 </div>
-                <div class="col-5">
+                <div class="col-4">
                 <button type="button" class="btn btn-light" onclick="startcow(this.form)" id="start-btn-cow"><h4>Spiel starten</h4></button>
                 </div>
             </div>
         </form>
     </div>
     <div class="d-flex justify-content-center">
-        <div class="container-sm bg-white p-4 m-3 overflow-auto game-inactiv" style="max-width: 1250px; min-height: 75vh; max-height: 80vh; border: 4px solid black; border-radius: 2px; box-shadow: 5px 5px #6c757d " id="herden-mentalitaet">
-            <div class="row overflow-auto" style="height: 65% !important;">
-                <div class="col-12 col-lg-6">
+        <div class="container-sm bg-white p-4 m-3 overflow-auto game-inactiv" style="max-width: 1250px; min-height: 75vh; max-height: 90vh; border: 4px solid black; border-radius: 2px; box-shadow: 5px 5px #6c757d " id="herden-mentalitaet">
+            <div class="d-lg-flex" style="height: 70% !important;">
+                <div class="mb-3 mb-md-0 me-md-3" style="min-width: 48%;">
                     <hr>
                     <h2 id="frage-cow" style="min-height: 10vh">Frage</h2>
                     <i class="fa-solid fa-pallet h1"></i><i class="fa-solid fa-pallet h1"></i><i class="fa-solid fa-pallet h1"></i><i class="fa-solid fa-cow h1"></i><i class="fa-solid fa-pallet h1"></i>
                     <hr>
                     <div class="btn btn-success d-none d-lg-block" id="next-qu-cow" onclick="nextcowquestion()"><h4>Nächste Frage</h4> </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <div class="row" id="cowspieler">
-                        <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(0)" id="cow0"><h2 id="hascow0"></h2><h3>Spieler 1 <br> Punkte:</h3><h3 id="pnkt-0"></h3></button>
-                        <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(1)" id="cow1"><h2 id="hascow1"></h2><h3>Spieler 2 <br> Punkte:</h3><h3 id="pnkt-1"></h3></button>
-                        <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(2)" id="cow2"><h4 id="hascow2"></h4><h3>Spieler 3 <br> Punkte:</h3><h3 id="pnkt-2"></h3></button>
-                        <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(3)" id="cow3"><h4 id="hascow3"></h4><h3>Spieler 4 <br> Punkte:</h3><h3 id="pnkt-3"></h3></button>
-                        <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(4)" id="cow4"><h4 id="hascow4"></h4><h3>Spieler 5 <br> Punkte:</h3><h3 id="pnkt-4"></h3></button>
-                    </div>
+                <div class="row overflow-scroll cowspieler" id="cowspieler" style="min-width: 48%;">
+                    <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(0)" id="cow0"><h2 id="hascow0"></h2><h3>Spieler 1 <br> Punkte:</h3><h3 id="pnkt-0"></h3></button>
+                    <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(1)" id="cow1"><h2 id="hascow1"></h2><h3>Spieler 2 <br> Punkte:</h3><h3 id="pnkt-1"></h3></button>
+                    <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(2)" id="cow2"><h4 id="hascow2"></h4><h3>Spieler 3 <br> Punkte:</h3><h3 id="pnkt-2"></h3></button>
+                    <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(3)" id="cow3"><h4 id="hascow3"></h4><h3>Spieler 4 <br> Punkte:</h3><h3 id="pnkt-3"></h3></button>
+                    <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(4)" id="cow4"><h4 id="hascow4"></h4><h3>Spieler 5 <br> Punkte:</h3><h3 id="pnkt-4"></h3></button>
                 </div>
             </div>
             <br>
