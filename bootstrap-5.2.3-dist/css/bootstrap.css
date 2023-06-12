@@ -11031,3 +11031,14 @@ body {
 .game-inactiv{
   filter: blur(3px);
 }
+
+.cowspieler {max-height: 65%;}
+
+@media (max-width: 599px) {
+  .cowspieler {max-height: 65% !important;}
+}
+
+@media (min-width: 1000px) {
+  .cowspieler {max-height: 95% !important;}
+}
+
