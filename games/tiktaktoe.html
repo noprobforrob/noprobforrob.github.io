@@ -68,8 +68,14 @@
 </div>
 
 <div class="container-fluid bg-danger bg-opacity-50 p-4" style="min-height: 105vh">
-    <h1 class="text-center p-2 ">Herden-Mentalität</h1>
-    <h2><i class="fa-solid fa-circle-info" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i></h2>
+    <div class="row">
+        <div class="col-1">
+            <h2><i class="fa-solid fa-circle-info" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i></h2>
+        </div>
+        <div class="col-11">
+            <h1 class="text-center p-2 ">Herden-Mentalität</h1>
+        </div>
+    </div>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
             <h3 class="offcanvas-title" id="offcanvasExampleLabel">Spielregeln</h3>
@@ -108,7 +114,7 @@
         <form action="#anzspieler">
             <div class="form-group h3 row">
                 <div class="col-7">
-                    <label class="col-form-label col-form-label-lg" for="anzspieler">Spieler ID</label>
+                    <label class="col-form-label col-form-label-lg" for="anzspieler">Spieler Anzahl</label>
                     <select class="form-control-lg h3 m-2" id="anzspieler">
                         <option>1</option>
                         <option>2</option>
@@ -140,15 +146,16 @@
     </div>
     <div class="d-flex justify-content-center">
         <div class="container-sm bg-white p-4 m-3 overflow-auto game-inactiv" style="max-width: 1050px; min-height: 75vh; max-height: 80vh; border: 4px solid black; border-radius: 2px; box-shadow: 5px 5px #6c757d " id="herden-mentalitaet">
-            <div class="row">
+            <div class="row h-50 overflow-auto">
                 <div class="col-12 col-lg-6">
                     <hr>
                     <h2 id="frage-cow" style="min-height: 10vh">Frage</h2>
                     <i class="fa-solid fa-pallet h1"></i><i class="fa-solid fa-pallet h1"></i><i class="fa-solid fa-pallet h1"></i><i class="fa-solid fa-cow h1"></i><i class="fa-solid fa-pallet h1"></i>
                     <hr>
+                    <div class="btn btn-success d-none d-lg-block" id="next-qu-cow" onclick="nextcowquestion()"><h4>Nächste Frage</h4> </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="row h-50 overflow-auto" id="cowspieler">
+                    <div class="row" id="cowspieler">
                         <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(0)" id="cow0"><h2 id="hascow0"></h2><h3>Spieler 1 <br> Punkte:</h3><h3 id="pnkt-0"></h3></button>
                         <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(1)" id="cow1"><h2 id="hascow1"></h2><h3>Spieler 2 <br> Punkte:</h3><h3 id="pnkt-1"></h3></button>
                         <button class="btn btn-outline-dark col-6 col-sm-4 col-lg-3" onclick="getpoints(2)" id="cow2"><h4 id="hascow2"></h4><h3>Spieler 3 <br> Punkte:</h3><h3 id="pnkt-2"></h3></button>
@@ -158,24 +165,28 @@
                 </div>
             </div>
             <br>
+            <div class="btn btn-success d-lg-none" id="next-qu-cow" onclick="nextcowquestion()"><h4>Nächste Frage</h4> </div>
             <br>
-            <div class="btn btn-success" id="next-qu-cow" onclick="nextcowquestion()"><h4>Nächste Frage</h4> </div>
             <hr>
+            <div style="background-color: #fefefe; overflow: hidden;">
             <h2>Kuh vergeben</h2>
-            <form action="">
-                <div class="form-group h3">
-                    <label class="col-sm-2 col-form-label col-form-label-lg" for="cowID">Spieler ID</label>
-                    <select class="col-sm-4 form-control-lg h3 m-2" id="cowID">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                    </select>
-                </div><br>
-                <button type="button" class="btn btn-outline-dark h3" onclick="placecow(this.form)">Kuh vergeben</button>
-            </form>
+                <form action="">
+                    <div class="form-group h3 row">
+                        <div class="col-8">
+                            <label class="col-5 col-form-label-lg" for="cowID">Spieler ID</label>
+                            <select class="col-4 form-control-lg h3 m-2" id="cowID">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                        <button type="button" class="col-4 btn btn-outline-dark h3" onclick="placecow(this.form)">Kuh vergeben</button>
+                    </div>
+                </form>
+            </div>
             <br>
         </div>
     </div>
