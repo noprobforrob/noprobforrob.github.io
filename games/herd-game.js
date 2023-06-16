@@ -57,7 +57,22 @@ let herdquestions =[
     "Nenne eine Sache, die du auf eine einsame Insel mitnehmen würdest.",
     "Was ist das beste Geschenk für jemanden, den du nicht magst?",
     "Nenne etwas, das sich schnell bewegt.",
-    "Was findet man oft in einem Kühlschrank?"]
+    "Was findet man oft in einem Kühlschrank?",
+    "Was ist ein häufiger Grund, warum Leute zu spät kommen?",
+    "Was ist ein Merkmal einer guten Pizza?",
+    "Welche Farbe passt zu fast allem?",
+    "Welche Aktivität macht man oft im Sommer?",
+    "Was ist ein beliebtes Geschenk zum Geburtstag?",
+    "Was ist etwas, das man vor einer wichtigen Prüfung tut?",
+    "Nenne ein Tier, das gut im Dunkeln sehen kann.",
+    "Was ist ein guter Weg, um Stress abzubauen?",
+    "Was ist eine Eigenschaft eines guten Freundes?",
+    "Was ist etwas, das man am Strand machen kann?",
+    "Nenne ein Musikinstrument, das man leicht transportieren kann.",
+    "Ein berühmtes Wahrzeichen in Europa",
+    "Eine Ausrede, um nicht zur Schule/Arbeit zu gehen",
+    "Etwas, das man mit einem Geburtstag verbindet",
+    "Ein Haushaltsgerät, das oft kaputt geht"];
 
 function getpoints(numb) {
     if(document.getElementById("cow"+numb).classList.contains("btn-success")){
