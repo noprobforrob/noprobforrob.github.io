@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>m3-Vorbereitung</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="fontawesome/css/solid.min.css">
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+</head>
+<body>
+<div class="justify-content-center d-none d-lg-flex pt-3" style="background-color: #282F69;">
+  <img class="align-self-center" src="logo.png" width="300px" alt="Wettbewerbslogo">
+</div>
+<nav class="navbar navbar-dark navbar-expand-lg sticky-top justify-content-end" style="max-width: 100vw; background-color: #282F69;">
+  <script src="navigation.js?vs=1.1"></script>
+  <script>
+    document.getElementById("vorbereitung").classList.add('active');
+  </script>
+</nav>
+
+<div class="container-lg p-3">
+  <h1 class="text-center">Vorbereitung</h1><br>
+  <div class="container-lg mg-auto mb-3 mx-3 fs-5">
+    <div class="card p-4">
+      <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active"
+             id="tab-login"
+             data-bs-toggle="tab"
+             href="#pills-login"
+             role="tab"
+             aria-controls="pills-login" aria-expanded="true">Für Teams</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link"
+             id="tab-register"
+             data-bs-toggle="tab"
+             href="#pills-register"
+             role="tab"
+             aria-controls="pills-register">Für Lehrpersonen</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+          <div class=" h-75 mx-3 p-3">
+            <div class="m-2">
+              <h2 class="text-center">Wollt ihr euch auf den Wettbewerb vorbreiten?</h2>
+              <p>Quizzes<br>
+                Denksportaufgaben<br>
+                Eure Lehrkraft kann die Lösungen anfordern!<br>
+              </p>
+            </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+        <div class="h-75 mb-3 p-3">
+          <h2 class="text-center">Sie wollen Ihre Teams vorbereiten?</h2>
+          <p>
+            Quizzes: Fragen aus Känguru und Biber der Informatik<br>
+            Denksportaufgaben<br>
+            Lösungen anfordern
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="footer.js"></script>
+</body>
+</html>
