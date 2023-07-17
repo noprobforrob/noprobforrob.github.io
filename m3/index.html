@@ -23,15 +23,15 @@
     <div class="d-flex justify-content-center d-lg-none">
         <img src="logo.png" width="300px" alt="Wettbewerbslogo">
     </div>
-    <div class="display-4 text-center">m3 - der Mathe-Wettbewerb zu dritt!</div><br>
-    <button class="btn btn-warning p-4 rounded-4"><h1>Anmeldung für Schulen</h1></button>
+    <div class="display-4 text-center">m3 - der Mathe-Wettbewerb zu dritt</div><br>
+    <a class="btn btn-warning p-4 rounded-4" href="anmeldung.html"><h1>Anmeldung für Schulen</h1></a>
 </div>
 <div class="container-lg p-3">
     <hr>
     <p>
     <b>Anmeldung:</b> von x bis y <br><br>
 
-    <b>Wettbewerb:</b> 17.02.2024 von 10:00 bis 12:30 Uhr <br><br>
+    <b>Wettbewerb:</b> 17.02.2024, 10:00-12:30 Uhr <br><br>
 
     <b>Siegerehrung:</b> Nähere Infos folgen <br><br>
     </p>
@@ -56,7 +56,7 @@
         <div class="col-12 col-lg-5">
         <table class=" table table-responsive table-striped">
             <thead>
-                <th>Uhrzeit</th>
+                <th>Zeitplan</th>
             </thead>
             <tr>
                 <td>10:00-10:45 Uhr</td>
@@ -87,6 +87,31 @@
         <div class="col-12"></div>
         <div class="col-2 col-lg-1 p-2"><i class="fa fa-calendar-check fa-xl"></i></div> <div class="col-10 p-2">Die Platzierung erfährt deine Lehrperson 2 Wochen nach dem Wettbewerb.</div>
     </div>
+    <br>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Regeln
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Wettbewerbs-Regeln</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Nicht erlaubt sind
+                   <ul>
+                       <li>technische Hilfsmittel (Taschenrechner, SmartPhone)</li>
+                       <li>Zusammenarbeit mit anderen Gruppen</li>
+                   </ul>
+                    Eine Gruppe muss aus mindestens 2 Personen bestehen. Es kann nicht alleine am Wettbewerb teilgenommen werden.
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
     </p>
 </div>
 <script src="footer.js"></script>

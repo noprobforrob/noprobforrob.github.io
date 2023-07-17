@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>m3 - Anmeldung</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>m3 - Anmeldung</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+</head>
+<body>
+<div class="justify-content-center d-none d-lg-flex pt-3" style="background-color: #282F69;">
+    <a href="index.html"><img class="align-self-center" src="logo.png" width="300px" alt="Wettbewerbslogo"></a>
+</div>
+<div style="background-color: #282F69;">
+    <h1 class="text-white text-center p-3">Anmeldung</h1>
+</div>
+<div class="container-lg p-3">
+    <h2>Neues Team registrieren:</h2> <br>
+    <h3>Team 1</h3><br>
+    <form>
+        <div class="row">
+            <div class="col-5 col-lg-2 row">
+                <div class="col-auto text-danger">*</div> <label class="col-auto">Schulstufe</label>
+            </div>
+            <div class="col-7 col-lg-2">
+                <select class="form-select">
+                    <option>5.</option>
+                    <option>6.</option>
+                    <option>7.</option>
+                    <option>8.</option>
+                </select>
+            </div>
+            <div class="col-12 col-lg-4">
+                <span class="form-text">
+                  Schüler*innen müssen alle aus der selben Schustufe sein.
+                </span>
+            </div>
+        </div><br>
+    <table class="table table-responsive table-striped">
+        <thead>
+            <th></th>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>T-Shirt Größe</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-danger">*</td>
+                <td><input type="text" class="form-control" name="vn1" required></td>
+                <td><input type="text" class="form-control" name="nn1" required></td>
+                <td><select class="form-select" name="t1" required>
+                    <option>xs</option>
+                    <option>s</option>
+                    <option>m</option>
+                    <option>lg</option>
+                    <option>xl</option>
+                    <option>xxl</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td class="text-danger">*</td>
+                <td><input type="text" class="form-control" name="vn2" required></td>
+                <td><input type="text" class="form-control" name="nn2" required></td>
+                <td><select class="form-select" name="t2" required>
+                    <option>xs</option>
+                    <option>s</option>
+                    <option>m</option>
+                    <option>lg</option>
+                    <option>xl</option>
+                    <option>xxl</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" class="form-control" name="vn2" ></td>
+                <td><input type="text" class="form-control" name="nn2" ></td>
+                <td><select class="form-select" name="t2" >
+                    <option>xs</option>
+                    <option>s</option>
+                    <option>m</option>
+                    <option>lg</option>
+                    <option>xl</option>
+                    <option>xxl</option>
+                </select></td>
+            </tr>
+        </tbody>
+    </table>
+        <div class="row">
+            <div class="col-auto text-danger">*</div>
+            <input type="checkbox" class="form-check col-auto">
+            <div class="col-auto">Die Eltern haben die Datenschutzerklärungen zur Kenntnis genommen.</div>
+        </div><br>
+        <button class="btn btn-primary" name="team1" value="1">Speichern</button><br><br>
+        <div class="text-muted">* Erforderlich</div>
+    </form>
+    <hr>
+    <div id="team2"></div>
+    <div id="team3"></div>
+    <div id="team4"></div>
+    <button class="btn btn-primary p-3" onclick="generate();" id="newteambtn"><i class="fa fa-plus fa-2x"></i></button>
+    <script>
+        let teams = 1;
+        function generate(){
+            if(teams < 4){
+                ++teams;
+                const newteam = document.getElementById("team"+teams);
+                newteam.innerHTML = '<h3>Team '+teams+'</h3><br>\n' +
+                    '    <form>\n' +
+                    '        <div class="row">\n' +
+                    '            <div class="col-5 col-lg-2 row">\n' +
+                    '                <div class="col-auto text-danger">*</div> <label class="col-auto">Schulstufe</label>\n' +
+                    '            </div>\n' +
+                    '            <div class="col-7 col-lg-2">\n' +
+                    '                <select class="form-select">\n' +
+                    '                    <option>5.</option>\n' +
+                    '                    <option>6.</option>\n' +
+                    '                    <option>7.</option>\n' +
+                    '                    <option>8.</option>\n' +
+                    '                </select>\n' +
+                    '            </div>\n' +
+                    '            <div class="col-12 col-lg-4">\n' +
+                    '                <span class="form-text">\n' +
+                    '                  Schüler*innen müssen alle aus der selben Schustufe sein.\n' +
+                    '                </span>\n' +
+                    '            </div>\n' +
+                    '        </div><br>\n' +
+                    '    <table class="table table-responsive table-striped">\n' +
+                    '        <thead>\n' +
+                    '            <th></th>\n' +
+                    '            <th>Vorname</th>\n' +
+                    '            <th>Nachname</th>\n' +
+                    '            <th>T-Shirt Größe</th>\n' +
+                    '        </thead>\n' +
+                    '        <tbody>\n' +
+                    '            <tr>\n' +
+                    '                <td class="text-danger">*</td>\n' +
+                    '                <td><input type="text" class="form-control" name="vn1" required></td>\n' +
+                    '                <td><input type="text" class="form-control" name="nn1" required></td>\n' +
+                    '                <td><select class="form-select" name="t1" required>\n' +
+                    '                    <option>xs</option>\n' +
+                    '                    <option>s</option>\n' +
+                    '                    <option>m</option>\n' +
+                    '                    <option>lg</option>\n' +
+                    '                    <option>xl</option>\n' +
+                    '                    <option>xxl</option>\n' +
+                    '                </select></td>\n' +
+                    '            </tr>\n' +
+                    '            <tr>\n' +
+                    '                <td class="text-danger">*</td>\n' +
+                    '                <td><input type="text" class="form-control" name="vn2" required></td>\n' +
+                    '                <td><input type="text" class="form-control" name="nn2" required></td>\n' +
+                    '                <td><select class="form-select" name="t2" required>\n' +
+                    '                    <option>xs</option>\n' +
+                    '                    <option>s</option>\n' +
+                    '                    <option>m</option>\n' +
+                    '                    <option>lg</option>\n' +
+                    '                    <option>xl</option>\n' +
+                    '                    <option>xxl</option>\n' +
+                    '                </select></td>\n' +
+                    '            </tr>\n' +
+                    '            <tr>\n' +
+                    '                <td></td>\n' +
+                    '                <td><input type="text" class="form-control" name="vn2" ></td>\n' +
+                    '                <td><input type="text" class="form-control" name="nn2" ></td>\n' +
+                    '                <td><select class="form-select" name="t2" >\n' +
+                    '                    <option>xs</option>\n' +
+                    '                    <option>s</option>\n' +
+                    '                    <option>m</option>\n' +
+                    '                    <option>lg</option>\n' +
+                    '                    <option>xl</option>\n' +
+                    '                    <option>xxl</option>\n' +
+                    '                </select></td>\n' +
+                    '            </tr>\n' +
+                    '        </tbody>\n' +
+                    '    </table>\n' +
+                    '        <div class="row">\n' +
+                    '            <div class="col-auto text-danger">*</div>\n' +
+                    '            <input type="checkbox" class="form-check col-auto">\n' +
+                    '            <div class="col-auto">Die Eltern haben die Datenschutzerklärungen zur Kenntnis genommen.</div>\n' +
+                    '        </div><br>\n' +
+                    '        <button class="btn btn-primary" name="team'+teams+'" value="1">Speichern</button><br><br>'+
+                    '        <div class="text-muted">* Erforderlich</div>\n' +
+                    '    </form>\n' +
+                    '    <hr>';
+                if(teams === 4){
+                    document.getElementById('newteambtn').classList.add('d-none');
+                }
+            }
+        }
+
+
+    </script>
+</div>
+<script src="footer.js"></script>
+</body>
+</html>
