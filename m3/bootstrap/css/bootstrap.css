@@ -162,6 +162,7 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.15rem;
+  color: #383838;
 }
 
 abbr[title] {
@@ -181,6 +182,7 @@ address {
 ol,
 ul {
   padding-left: 2rem;
+  color: #383838;
 }
 
 ol,
@@ -188,6 +190,7 @@ ul,
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  color: #383838;
 }
 
 ol ol,
