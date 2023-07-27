@@ -15,7 +15,7 @@ document.write('<button class="navbar-toggler" type="button" data-bs-toggle="off
     '                        <a class="nav-link" id="preise" aria-current="page" href="preise.html">Preise</a>\n' +
     '                    </li>\n' +
     '                    <li class="nav-item mx-2">\n' +
-    '                        <a class="nav-link" id="vorbereitung" aria-current="page" href="vorbereitung.html">Vorbereitung</a>\n' +
+    '                        <a class="nav-link" id="vorbereitung" aria-current="page" href="vorbereitung.html">Training</a>\n' +
     '                    </li>\n' +
     '                    <li class="nav-item mx-2">\n' +
     '                        <a class="nav-link" id="kontakt" aria-current="page" href="kontakt.html">Kontakt</a>\n' +
